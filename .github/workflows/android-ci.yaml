@@ -33,3 +33,9 @@ jobs:
 
       - name : Buildin APK
         run : ./gradlew assembleDebug
+
+      - name : Uploadin APK
+        uses : actions/upload-artifact@v4
+        with :
+          name : cek-roda-app
+          path : app/build/outputs/apk/debug/*.apk
